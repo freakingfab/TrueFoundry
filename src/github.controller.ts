@@ -6,9 +6,10 @@ export class GithubController {
   @Get('github')
   @Redirect('https://github.com/login/oauth/authorize')
   getGithubAuthUrl() {
+    const port = process.env.PORT || 3000;
     const params = new URLSearchParams({
       client_id: '30a5562a4f72ce518967',
-      redirect_uri: 'http://localhost:3000/auth/github/callback',
+      redirect_uri: `http://localhost:${port}/auth/github/callback`,
       scope: 'repo',
     });
     return {
