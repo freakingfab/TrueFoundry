@@ -9,7 +9,7 @@ export class GithubController {
     const port = process.env.PORT || 3000;
     const params = new URLSearchParams({
       client_id: '30a5562a4f72ce518967',
-      redirect_uri: `http://localhost:${port}/auth/github/callback`,
+      redirect_uri: `http://true-foundry-freakingfab-qouycgops-freakingfab.vercel.app:${port}/auth/github/callback`,
       scope: 'repo',
     });
     return {
